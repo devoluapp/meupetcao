@@ -1,15 +1,370 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Pet Cão</title>
+    <title>Meu Pet Cão | O Portal do Seu Melhor Amigo</title>
+    <meta name="description" content="Portal completo com dicas de saúde, adestramento, alimentação e cuidados para cães. Tudo para o tutor consciente.">
+    
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#fff7ed',
+            100: '#ffedd5',
+            200: '#fed7aa',
+            300: '#fdba74',
+            400: '#fb923c',
+            500: '#f97316', # Orange-500
+            600: '#ea580c',
+            700: '#c2410c',
+            800: '#9a3412',
+            900: '#7c2d12',
+          },
+          accent: {
+             50: '#f0f9ff',
+             900: '#0c4a6e',
+          }
+        },
+        fontFamily: {
+          sans: ['Outfit', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+<body class="bg-brand-50 min-h-screen font-sans flex flex-col">
+    
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 group">
+            <img src="logo_meu_pet_cao.png" alt="Meu Pet Cão Logo" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
+            <span class="text-xl font-bold text-brand-900 tracking-tight">MeuPet<span class="text-brand-500">Cão</span></span>
+        </a>
+        <nav class="hidden md:flex gap-6">
+            <a href="index.html" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Início</a>
+            <a href="#" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Categorias</a>
+            <a href="#" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Sobre</a>
+            <a href="#" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Contato</a>
+        </nav>
+        <button class="md:hidden text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+</header>
 
-<body>
-    <h1>Meu Pet Cão</h1>
-    <p>Meu Pet Cão é um site que ajuda os tutores a cuidar de seus cães.</p>
+    
+    <main class="flex-grow">
+        
+    <section class="bg-brand-100 py-16 md:py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-4 block">Bem-vindo ao Meu Pet Cão</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-brand-900 mb-6 leading-tight">
+                Tudo o que seu <span class="text-brand-600">melhor amigo</span> precisa saber.
+            </h1>
+            <p class="text-xl text-brand-800/80 mb-10 max-w-2xl mx-auto">
+                Dicas de saúde, comportamento e bem-estar para fazer a vida do seu cão ainda mais feliz.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                 <a href="#featured" class="bg-brand-600 text-white px-8 py-3 rounded-full font-bold hover:bg-brand-700 transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30">
+                    Começar a Ler
+                </a>
+            </div>
+        </div>
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-accent-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
+    </section>
+    <div id="featured" class="container mx-auto px-4 py-16 space-y-20">
+        <section>
+            <div class="flex items-end justify-between mb-8 border-b border-gray-200 pb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Comportamento e Adestramento</h2>
+                <a href="#" class="text-brand-600 hover:text-brand-800 font-medium text-sm hidden sm:block">Ver todos &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+            <a href="posts/adestramento-positivo-cachorro.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/adestramento-positivo-cachorro.jpg" alt="Adestramento Positivo: Eduque Seu Cão com Amor e Respeito" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Comportamento e Adestramento</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Adestramento Positivo: Eduque Seu Cão com Amor e Respeito
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        Aprenda adestramento positivo para seu cão com técnicas eficazes. Comandos básicos, erros comuns e como educar com amor. Guia completo!
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            <a href="posts/ansiedade-separacao-caes.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/ansiedade-separacao-caes.jpg" alt="Ansiedade de Separação em Cães: Como Identificar e Ajudar Seu Melhor Amigo" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Comportamento e Adestramento</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Ansiedade de Separação em Cães: Como Identificar e Ajudar Seu Melhor Amigo
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        Cachorro com ansiedade de separação? Aprenda a identificar sinais, causas e tratamentos eficazes. Ajude seu cão a ficar sozinho!
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            </div>
+        </section>
+        
+        <section>
+            <div class="flex items-end justify-between mb-8 border-b border-gray-200 pb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Cuidados Diários</h2>
+                <a href="#" class="text-brand-600 hover:text-brand-800 font-medium text-sm hidden sm:block">Ver todos &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+            <a href="posts/passeios-cachorro-guia-completo.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/passeios-cachorro-guia-completo.jpg" alt="Passeios com Seu Cão: Muito Além do Exercício Físico" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Cuidados Diários</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Passeios com Seu Cão: Muito Além do Exercício Físico
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        Tudo sobre passeios com cachorro: frequência ideal, equipamentos, como resolver puxões na guia e tornar o passeio prazeroso. Confira!
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            <a href="posts/higiene-e-banho-cachorro.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/higiene-e-banho-cachorro.jpg" alt="Cuidados com a Higiene e Banho do Seu Cão: Guia Completo para um Peludo Saudável" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Cuidados Diários</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Cuidados com a Higiene e Banho do Seu Cão: Guia Completo para um Peludo Saudável
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        Guia completo de higiene canina: frequência de banho, cuidados com orelhas, unhas, dentes e tipos de pelo. Mantenha seu cão saudável!
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            </div>
+        </section>
+        
+        <section>
+            <div class="flex items-end justify-between mb-8 border-b border-gray-200 pb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Alimentação</h2>
+                <a href="#" class="text-brand-600 hover:text-brand-800 font-medium text-sm hidden sm:block">Ver todos &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+            <a href="posts/alimentacao-natural-cachorro.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/alimentacao-natural-cachorro.jpg" alt="Alimentação Natural para Cães: O Que Você Precisa Saber" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Alimentação</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Alimentação Natural para Cães: O Que Você Precisa Saber
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        Alimentação natural para cachorro: vantagens, como começar, receitas balanceadas e alimentos proibidos. Guia seguro e completo!
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            <a href="posts/como-escolher-racao-ideal-cachorro.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/como-escolher-racao-ideal-cachorro.jpg" alt="Como Escolher a Ração Ideal para Seu Cão: Guia Completo para Tutores Conscientes" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Alimentação</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Como Escolher a Ração Ideal para Seu Cão: Guia Completo para Tutores Conscientes
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        Descubra como escolher a ração ideal para seu cachorro. Guia completo com tipos, rótulos e necessidades por idade e porte. Dicas práticas!
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            </div>
+        </section>
+        
+        <section>
+            <div class="flex items-end justify-between mb-8 border-b border-gray-200 pb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Geral</h2>
+                <a href="#" class="text-brand-600 hover:text-brand-800 font-medium text-sm hidden sm:block">Ver todos &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+            <a href="posts/vacinas-para-caes-o-escudo-de-protecao-do-seu-melhor-amigo.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/vacinas-para-caes-o-escudo-de-protecao-do-seu-melhor-amigo.jpg" alt="Vacinas para Cães: O Escudo de Proteção do Seu Melhor Amigo" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Geral</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Vacinas para Cães: O Escudo de Proteção do Seu Melhor Amigo
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            <a href="posts/linguagem-corporal-canina-decifrando-os-sinais-do-seu-melhor-amigo.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/linguagem-corporal-canina-decifrando-os-sinais-do-seu-melhor-amigo.jpg" alt="Linguagem Corporal Canina: Decifrando os Sinais do Seu Melhor Amigo" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Geral</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Linguagem Corporal Canina: Decifrando os Sinais do Seu Melhor Amigo
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            </div>
+        </section>
+        
+        <section>
+            <div class="flex items-end justify-between mb-8 border-b border-gray-200 pb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Saúde e Bem-Estar</h2>
+                <a href="#" class="text-brand-600 hover:text-brand-800 font-medium text-sm hidden sm:block">Ver todos &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+            <a href="posts/cuidados-cachorro-idoso.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/cuidados-cachorro-idoso.jpg" alt="Cuidados com Cães Idosos: Amor e Qualidade de Vida na Melhor Idade" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Saúde e Bem-Estar</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Cuidados com Cães Idosos: Amor e Qualidade de Vida na Melhor Idade
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        Cuidados essenciais com cachorro idoso: alimentação, saúde, conforto e qualidade de vida. Guia completo para a terceira idade canina!
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            <a href="posts/primeiros-socorros-cachorro.html" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full transform hover:-translate-y-1">
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <img src="assets/primeiros-socorros-cachorro.jpg" alt="Primeiros Socorros para Cães: O Que Todo Tutor Precisa Saber" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-white/90 backdrop-blur-sm text-brand-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Saúde e Bem-Estar</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors line-clamp-2">
+                        Primeiros Socorros para Cães: O Que Todo Tutor Precisa Saber
+                    </h3>
+                    <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">
+                        Primeiros socorros para cachorro: engasgo, convulsão, intoxicação e mais. Saiba como agir em emergências e salvar vidas. Guia essencial!
+                    </p>
+                    <span class="text-brand-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Ler Artigo <span class="text-lg">&rarr;</span>
+                    </span>
+                </div>
+            </a>
+            
+            </div>
+        </section>
+        </div>
+    </main>
+
+    
+<footer class="bg-brand-900 text-brand-50 mt-12 py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">MeuPet<span class="text-brand-400">Cão</span></h3>
+            <p class="text-brand-200 text-sm leading-relaxed">
+                Seu portal confiável para cuidar melhor do seu melhor amigo. Dicas de saúde, alimentação, comportamento e muito amor.
+            </p>
+        </div>
+        <div>
+            <h4 class="font-semibold mb-4 text-white">Links Rápidos</h4>
+            <ul class="space-y-2 text-sm text-brand-200">
+                <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Sobre Nós</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Política de Privacidade</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Termos de Uso</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold mb-4 text-white">Newsletter</h4>
+            <p class="text-brand-200 text-sm mb-4">Receba dicas exclusivas no seu e-mail.</p>
+            <form class="flex gap-2">
+                <input type="email" placeholder="Seu e-mail..." class="bg-brand-800 text-white placeholder-brand-400 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 w-full" disabled>
+                <button type="submit" class="bg-brand-500 hover:bg-brand-400 text-white px-4 py-2 rounded-lg font-medium transition-colors" disabled>OK</button>
+            </form>
+        </div>
+    </div>
+    <div class="container mx-auto px-4 mt-8 pt-8 border-t border-brand-800 text-center text-sm text-brand-400">
+        &copy; 2024 Meu Pet Cão. Todos os direitos reservados.
+    </div>
+</footer>
+
 </body>
-
 </html>
