@@ -7,6 +7,7 @@ import glob
 SOURCE_DIR = "../artigos-texto"
 OUTPUT_DIR = "posts"
 INDEX_FILE = "index.html"
+ABOUT_FILE = "sobre.html"
 SEO_FILE = "../artigos-texto/0-Instruções para SEO.md"
 ASSETS_DIR = "assets"
 PLACEHOLDER_IMG = "../assets/article_placeholder.png" # Relative to posts
@@ -32,6 +33,7 @@ TAILWIND_SCRIPT = """
             700: '#c2410c',
             800: '#9a3412',
             900: '#7c2d12',
+            logo: '#5c4340', # Extracted from logo
           },
           accent: {
              50: '#f0f9ff',
@@ -57,9 +59,7 @@ HEADER_TEMPLATE = """
         </a>
         <nav class="hidden md:flex gap-6">
             <a href="{home_link}" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Início</a>
-            <a href="#" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Categorias</a>
-            <a href="#" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Sobre</a>
-            <a href="#" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Contato</a>
+            <a href="{about_link}" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Sobre</a>
         </nav>
         <button class="md:hidden text-gray-600 focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -81,18 +81,13 @@ FOOTER_TEMPLATE = """
             <h4 class="font-semibold mb-4 text-white">Links Rápidos</h4>
             <ul class="space-y-2 text-sm text-brand-200">
                 <li><a href="{home_link}" class="hover:text-white transition-colors">Início</a></li>
-                <li><a href="#" class="hover:text-white transition-colors">Sobre Nós</a></li>
+                <li><a href="{about_link}" class="hover:text-white transition-colors">Sobre Nós</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Política de Privacidade</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Termos de Uso</a></li>
             </ul>
         </div>
         <div>
-            <h4 class="font-semibold mb-4 text-white">Newsletter</h4>
-            <p class="text-brand-200 text-sm mb-4">Receba dicas exclusivas no seu e-mail.</p>
-            <form class="flex gap-2">
-                <input type="email" placeholder="Seu e-mail..." class="bg-brand-800 text-white placeholder-brand-400 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 w-full" disabled>
-                <button type="submit" class="bg-brand-500 hover:bg-brand-400 text-white px-4 py-2 rounded-lg font-medium transition-colors" disabled>OK</button>
-            </form>
+           <!-- Removed Newsletter -->
         </div>
     </div>
     <div class="container mx-auto px-4 mt-8 pt-8 border-t border-brand-800 text-center text-sm text-brand-400">
@@ -291,7 +286,7 @@ def main():
     {TAILWIND_SCRIPT}
 </head>
 <body class="bg-brand-50 min-h-screen font-sans flex flex-col">
-    {HEADER_TEMPLATE.format(home_link="../index.html", logo_path="../logo_meu_pet_cao.png")}
+    {HEADER_TEMPLATE.format(home_link="../index.html", about_link="../sobre.html", logo_path="../logo_meu_pet_cao.png")}
     
     <main class="flex-grow container mx-auto px-4 py-8 md:py-12 max-w-4xl">
         <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -317,7 +312,7 @@ def main():
         </div>
     </main>
 
-    {FOOTER_TEMPLATE.format(home_link="../index.html")}
+    {FOOTER_TEMPLATE.format(home_link="../index.html", about_link="../sobre.html")}
 </body>
 </html>
 """
@@ -351,14 +346,14 @@ def main():
     <section class="bg-brand-100 py-16 md:py-24 relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10 text-center">
             <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-4 block">Bem-vindo ao Meu Pet Cão</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-brand-900 mb-6 leading-tight">
-                Tudo o que seu <span class="text-brand-600">melhor amigo</span> precisa saber.
+            <h1 class="text-4xl md:text-6xl font-extrabold text-brow-700 mb-6 leading-tight">
+                    Tudo o que você precisa saber para cuidar do seu melhor amigo.
             </h1>
             <p class="text-xl text-brand-800/80 mb-10 max-w-2xl mx-auto">
                 Dicas de saúde, comportamento e bem-estar para fazer a vida do seu cão ainda mais feliz.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                 <a href="#featured" class="bg-brand-600 text-white px-8 py-3 rounded-full font-bold hover:bg-brand-700 transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30">
+                 <a href="#featured" class="bg-[#5c4340] text-white px-8 py-3 rounded-full font-bold hover:bg-brand-900 transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30">
                     Começar a Ler
                 </a>
             </div>
@@ -421,13 +416,13 @@ def main():
     {TAILWIND_SCRIPT}
 </head>
 <body class="bg-brand-50 min-h-screen font-sans flex flex-col">
-    {HEADER_TEMPLATE.format(home_link="index.html", logo_path="logo_meu_pet_cao.png")}
+    {HEADER_TEMPLATE.format(home_link="index.html", about_link="sobre.html", logo_path="logo_meu_pet_cao.png")}
     
     <main class="flex-grow">
         {index_html_content}
     </main>
 
-    {FOOTER_TEMPLATE.format(home_link="index.html")}
+    {FOOTER_TEMPLATE.format(home_link="index.html", about_link="sobre.html")}
 </body>
 </html>
 """
@@ -435,6 +430,48 @@ def main():
     with open(INDEX_FILE, 'w') as f:
         f.write(index_page)
     print("Generated index.html")
+
+    # Generate About Page
+    about_html = f"""<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Meu Pet Cão</title>
+    <meta name="description" content="Saiba mais sobre o Meu Pet Cão e nossa missão de ajudar tutores a cuidar melhor de seus amigos.">
+    {TAILWIND_SCRIPT}
+</head>
+<body class="bg-brand-50 min-h-screen font-sans flex flex-col">
+    {HEADER_TEMPLATE.format(home_link="index.html", about_link="sobre.html", logo_path="logo_meu_pet_cao.png")}
+    
+    <main class="flex-grow container mx-auto px-4 py-16 max-w-4xl">
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center text-brand-700">Sobre o Meu Pet Cão</h1>
+            
+            <div class="prose prose-lg prose-brand max-w-none text-gray-700 space-y-6">
+                <p class="text-xl leading-relaxed font-medium">Bem-vindo ao Meu Pet Cão!</p>
+                <p>Nossa missão é simples: tornar a vida do seu melhor amigo mais feliz, saudável e longa.</p>
+                <p>Sabemos que ter um cão é uma jornada de amor, mas também de responsabilidade. Por isso, criamos este portal para ser o seu guia confiável.</p>
+                <p>Aqui, traduzimos a ciência veterinária e o comportamento canino em dicas, guias práticos e informações acessíveis para você tomar as melhores decisões pelo seu peludo.</p>
+                <p>Seja você um tutor de primeira viagem ou alguém que já convive com cães há décadas, nosso objetivo é o mesmo: fortalecer o vínculo único que existe entre vocês.</p>
+                <p class="text-center font-bold text-brand-600 text-2xl mt-8">Porque eles não são apenas animais de estimação. São família.</p>
+            </div>
+            
+             <div class="mt-12 text-center">
+                <a href="index.html" class="inline-flex items-center gap-2 bg-[#5c4340] text-white px-8 py-3 rounded-full font-bold hover:bg-brand-900 transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30">
+                    Explore Nossos Artigos
+                </a>
+            </div>
+        </div>
+    </main>
+
+    {FOOTER_TEMPLATE.format(home_link="index.html", about_link="sobre.html")}
+</body>
+</html>
+"""
+    with open(ABOUT_FILE, 'w') as f:
+        f.write(about_html)
+    print("Generated sobre.html")
 
 if __name__ == "__main__":
     main()

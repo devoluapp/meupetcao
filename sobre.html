@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Meu Pet Cão</title>
+    <meta name="description" content="Saiba mais sobre o Meu Pet Cão e nossa missão de ajudar tutores a cuidar melhor de seus amigos.">
+    
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#fff7ed',
+            100: '#ffedd5',
+            200: '#fed7aa',
+            300: '#fdba74',
+            400: '#fb923c',
+            500: '#f97316', # Orange-500
+            600: '#ea580c',
+            700: '#c2410c',
+            800: '#9a3412',
+            900: '#7c2d12',
+            logo: '#5c4340', # Extracted from logo
+          },
+          accent: {
+             50: '#f0f9ff',
+             900: '#0c4a6e',
+          }
+        },
+        fontFamily: {
+          sans: ['Outfit', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-brand-50 min-h-screen font-sans flex flex-col">
+    
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 group">
+            <img src="logo_meu_pet_cao.png" alt="Meu Pet Cão Logo" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
+            <span class="text-xl font-bold text-brand-900 tracking-tight">MeuPet<span class="text-brand-500">Cão</span></span>
+        </a>
+        <nav class="hidden md:flex gap-6">
+            <a href="index.html" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Início</a>
+            <a href="sobre.html" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Sobre</a>
+        </nav>
+        <button class="md:hidden text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+</header>
+
+    
+    <main class="flex-grow container mx-auto px-4 py-16 max-w-4xl">
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center text-brand-700">Sobre o Meu Pet Cão</h1>
+            
+            <div class="prose prose-lg prose-brand max-w-none text-gray-700 space-y-6">
+                <p class="text-xl leading-relaxed font-medium">Bem-vindo ao Meu Pet Cão!</p>
+                <p>Nossa missão é simples: tornar a vida do seu melhor amigo mais feliz, saudável e longa.</p>
+                <p>Sabemos que ter um cão é uma jornada de amor, mas também de responsabilidade. Por isso, criamos este portal para ser o seu guia confiável.</p>
+                <p>Aqui, traduzimos a ciência veterinária e o comportamento canino em dicas, guias práticos e informações acessíveis para você tomar as melhores decisões pelo seu peludo.</p>
+                <p>Seja você um tutor de primeira viagem ou alguém que já convive com cães há décadas, nosso objetivo é o mesmo: fortalecer o vínculo único que existe entre vocês.</p>
+                <p class="text-center font-bold text-brand-600 text-2xl mt-8">Porque eles não são apenas animais de estimação. São família.</p>
+            </div>
+            
+             <div class="mt-12 text-center">
+                <a href="index.html" class="inline-flex items-center gap-2 bg-[#5c4340] text-white px-8 py-3 rounded-full font-bold hover:bg-brand-900 transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30">
+                    Explore Nossos Artigos
+                </a>
+            </div>
+        </div>
+    </main>
+
+    
+<footer class="bg-brand-900 text-brand-50 mt-12 py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">MeuPet<span class="text-brand-400">Cão</span></h3>
+            <p class="text-brand-200 text-sm leading-relaxed">
+                Seu portal confiável para cuidar melhor do seu melhor amigo. Dicas de saúde, alimentação, comportamento e muito amor.
+            </p>
+        </div>
+        <div>
+            <h4 class="font-semibold mb-4 text-white">Links Rápidos</h4>
+            <ul class="space-y-2 text-sm text-brand-200">
+                <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+                <li><a href="sobre.html" class="hover:text-white transition-colors">Sobre Nós</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Política de Privacidade</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">Termos de Uso</a></li>
+            </ul>
+        </div>
+        <div>
+           <!-- Removed Newsletter -->
+        </div>
+    </div>
+    <div class="container mx-auto px-4 mt-8 pt-8 border-t border-brand-800 text-center text-sm text-brand-400">
+        &copy; 2024 Meu Pet Cão. Todos os direitos reservados.
+    </div>
+</footer>
+
+</body>
+</html>
